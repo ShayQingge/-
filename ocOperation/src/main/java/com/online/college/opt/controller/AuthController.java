@@ -56,6 +56,7 @@ public class AuthController {
 		}
 		//修改了
 		UsernamePasswordToken token = new UsernamePasswordToken(user.getUsername(),user.getPassword());
+		System.out.println(user.getUsername()+":-------------------:"+user.getPassword());
 		try {
 			Subject currentUser = SecurityUtils.getSubject();
 			currentUser.login(token);//shiro实现登录
